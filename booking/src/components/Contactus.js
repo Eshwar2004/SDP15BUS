@@ -32,7 +32,7 @@ const ContactUs = () => {
   const handleSubmit = async () => {
     try {
       // Replace 'http://localhost:3000/contactus' with the actual endpoint where your backend is expecting the data
-      const response = await axios.post('http://localhost:3000/contactus', formData);
+      const response = await axios.post('http://busdejavu-backend.vercel.app/contactus', formData);
 
       // Handle the response as needed
       console.log('Data successfully sent to the server:', response.data);

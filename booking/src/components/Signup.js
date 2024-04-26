@@ -45,7 +45,7 @@ const SignUp = () => {
       setLoading(true);
       setError(null); // Clear any previous error
 
-      const backendUrl = 'http://localhost:3000';
+      const backendUrl = 'http://busdejavu-backend.vercel.app';
 
       const res = await fetch(`${backendUrl}/server/auth/signup`, {
         method: 'POST',

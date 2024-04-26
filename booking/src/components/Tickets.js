@@ -8,7 +8,7 @@ const Faculty = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/book') // Assuming your server is running on the same host
+    fetch('http://busdejavu-backend.vercel.app/book') // Assuming your server is running on the same host
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

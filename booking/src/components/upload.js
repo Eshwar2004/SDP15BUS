@@ -14,7 +14,7 @@ import { useState } from 'react';
     const formData = new FormData();
     formData.append('csvFile', selectedFile);
     try {
-      await axios.post("http://localhost:3000/buses", formData);
+      await axios.post("http://busdejavu-backend.vercel.app/buses", formData);
       console.log("File uploaded successfully!");
     } catch (error) {
       console.error("Error uploading file:", error);

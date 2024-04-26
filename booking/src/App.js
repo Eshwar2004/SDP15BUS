@@ -28,7 +28,7 @@ function App() {
   const login = async () => {
     try {
       const credentials = { username: 'test', password: 'password' };
-      const response = await axios.post('http://localhost:3000/server/auth/signin', credentials);
+      const response = await axios.post('http://busdejavu-backend.vercel.app/server/auth/signin', credentials);
       const { token } = response.data;
       localStorage.setItem('token', token);
       setToken(token);
