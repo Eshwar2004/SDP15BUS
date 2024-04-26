@@ -102,7 +102,7 @@ const SeatVacancy = () => {
         seatsselected: formData.seatsselected.join(','),
       };
 
-      const response = await axios.post('http://sdp-15-bus.vercel.app/book', modifiedFormData, { headers });
+      const response = await axios.post('http://localhost:3000/book', modifiedFormData, { headers });
       console.log(response.data);
       setFormSubmitted(true);
 

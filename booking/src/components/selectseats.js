@@ -17,7 +17,7 @@ const SeatSelection = ({ open, onClose, busId }) => {
   const handleReserveSeats = async () => {
     try {
       // Make an API call to update seat status
-      const response = await fetch(`http://sdp-15-bus.vercel.app/buses`, {
+      const response = await fetch(`http://localhost:3000/buses`, {
         method: 'POST', // You might need to adjust the HTTP method based on your API design
         headers: {
           'Content-Type': 'application/json',

@@ -20,7 +20,7 @@ function OtpMailAndVerification() {
             semail: email
         };
         try {
-            await axios.post("http://sdp-15-bus.vercel.app/api/sendotp", data);
+            await axios.post("http://localhost:3000/api/sendotp", data);
             console.log("OTP Sent Successfully");
             setIsOtpSent(true);
             setMessage('OTP sent to your email');
@@ -39,7 +39,7 @@ function OtpMailAndVerification() {
         console.log(data);
 
         try {
-            const response = await axios.post("http://sdp-15-bus.vercel.app/api/verifyotp", data);
+            const response = await axios.post("http://localhost:3000/api/verifyotp", data);
             console.log(response);
 
             if (response.data.success) {

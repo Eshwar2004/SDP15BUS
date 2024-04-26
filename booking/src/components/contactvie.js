@@ -10,7 +10,7 @@ const Contactvie = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('http://sdp-15-bus.vercel.app/contactus'); // Adjust the endpoint
+        const response = await axios.get('http://localhost:3000/contactus'); // Adjust the endpoint
         setContacts(response.data);
         setLoading(false);
       } catch (error) {
