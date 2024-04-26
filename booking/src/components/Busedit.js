@@ -27,7 +27,7 @@ const Busedit = () => {
   useEffect(() => {
     const fetchBusData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/buses/');
+        const response = await axios.get('http://sdp-15-bus.vercel.app/buses/');
         setBuses(response.data);
         setLoading(false);
       } catch (error) {
@@ -40,7 +40,7 @@ const Busedit = () => {
 
   const handleEdit = async (busID) => {
     try {
-      const response = await axios.get(`http://localhost:3000/buses/${busID}`);
+      const response = await axios.get(`http://sdp-15-bus.vercel.app/buses/${busID}`);
       const { _id, name,boarding,destination,boardingtime,droptime,price,noofseats,acornonac,seaterorsleeper,seatstatus,rating,seatvacancy } = response.data;
       setEditData({
         busID: _id,
@@ -65,7 +65,7 @@ const Busedit = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:3000/buses/${editData.busID}`, editData);
+      await axios.put(`http://sdp-15-bus.vercel.app/buses/${editData.busID}`, editData);
       setBuses((prevBuses) =>
         prevBuses.map((bus) =>
           bus._id === editData.busID
@@ -91,7 +91,7 @@ const Busedit = () => {
 
   const handleDelete = async (busID) => {
     try {
-      await axios.delete(`http://localhost:3000/buses/${busID}`);
+      await axios.delete(`http://sdp-15-bus.vercel.app/buses/${busID}`);
       setBuses((prevBuses) => prevBuses.filter((bus) => bus._id !== busID));
       console.log(`Deleted bus with ID: ${busID}`);
     } catch (error) {
