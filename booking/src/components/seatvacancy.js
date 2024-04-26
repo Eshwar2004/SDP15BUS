@@ -7,8 +7,8 @@ import TextField from '@mui/material/TextField';
 import { makeStyles } from '@mui/styles';
 import ChairIcon from '@mui/icons-material/Chair';
 import axios from 'axios';
-import Tickets from './Tickets';
-import Razorpay from 'razorpay-checkout';
+//import Tickets from './Tickets';
+//import Razorpay from 'razorpay-checkout';
 
 const useStyles = makeStyles({
   seatCard: {
@@ -107,7 +107,7 @@ const SeatVacancy = () => {
       setFormSubmitted(true);
 
       // Navigate to the Tickets page after successful form submission
-      navigate('/tickets', { state: { bookingData: response.data } });
+      navigate('/Tickets', { state: { bookingData: response.data } });
     } catch (error) {
       console.error('Error submitting form:', error);
 
